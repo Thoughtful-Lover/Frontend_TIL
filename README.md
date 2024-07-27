@@ -1,4 +1,4 @@
-# React_TIL
+# React
 * 본 레포지토리는 React 공식 홈페이지의 'LEARN REACT'를 기준으로 작성되었습니다.
 * 세부 목차는 아래와 같습니다.
 
