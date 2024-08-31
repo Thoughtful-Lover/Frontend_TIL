@@ -33,3 +33,24 @@
 * 리액트에서는 JSX 문법을 사용하기 위해 바벨을 사용
 
 * 화면에 count 상탯값을 보여 주고 증가, 감소 버튼을 통해서 count 상탯값을 변경하는 코드를 작성해 보자.
+
+#### JSX 문법 알아보기
+* JSX는 HTML에서 태그를 사용하는 방식과 유사
+* 간결하고 가독성 높음
+* HTML 태그와의 가장 큰 차이는 속서값을 작성하는 방법
+```javascript
+<div className="box">
+    <Title text="hello world" width={200} />
+    <button onClick={() => {}}>좋아요</button>
+    <a href="/home" style={{ marginTop: '10px', color: 'red' }}>
+        홈으로 이동
+    </a>
+</div>
+```
+* HTML에서 class, JSX에서 className
+* Title은 리액트 컴포넌트
+    * JSX에서는 돔 요소와 리액트 컴포넌트를 같이 사용할 수 있음
+    * text, width라는 두 개의 속성값을 입력받음
+    * width처럼 문자열 리터럴이 아닌 속성값은 중괄호를 사용해서 입력
+* 리액트에서는 이벤트 처리 함수를 호출할 때 브라우저에 상관없이 통일된 이벤트 객체(SyntheticEvnet)를 전달
+* JSX에서도 직접 스타일을 적용, 카멜 케이스를 이용
