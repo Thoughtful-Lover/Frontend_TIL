@@ -1,3 +1,13 @@
+function LikeButton() {
+    const [Liked, setLiked] = React.useState(false);
+    const text = Liked ? '좋아요 취소' : '좋아요';
+    return React.createElement(
+        'button',
+        { onClick: () => setLiked(!Liked) },
+        text,
+    );
+}
+
 function Container() {
     const [count, setCount] = React.useState(0);
     return (
