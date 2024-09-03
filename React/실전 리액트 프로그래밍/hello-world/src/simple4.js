@@ -22,3 +22,5 @@ function Container() {
         </div>
     );
 }
+const domContainer = document.querySelector('#react-root');
+ReactDOM.render(React.createElement(Container), domContainer)

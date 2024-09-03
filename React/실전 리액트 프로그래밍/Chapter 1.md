@@ -54,3 +54,42 @@
     * width처럼 문자열 리터럴이 아닌 속성값은 중괄호를 사용해서 입력
 * 리액트에서는 이벤트 처리 함수를 호출할 때 브라우저에 상관없이 통일된 이벤트 객체(SyntheticEvnet)를 전달
 * JSX에서도 직접 스타일을 적용, 카멜 케이스를 이용
+```
+simple3 를 simple4 로 전환하는 과정에서 상단한 얘를 먹였다.
+문제는 src/simple4.js 코드 하단에 ReactDom을 호출해서 해당 요소를 연결해주는 코드 부분을 빼먹었다는 것이다.
+그러고도 React.DOM 을 react.DOM 으로 적어서 구동이 안되었다.
+chatGPT는 이런 부분을 곧잘 뽑아내지만 조금은 자존심이 상했다...
+집중해보자 !!
+```
+#### JSX 문법을 바벨로 컴파일하기
+```bash
+# 필요한 패키지를 설치하고
+npm install @babel/core @babel/cli @babel/preset-react
+# 이 명령어를 실행하면 바벨이 JSX 문법을 컴파일해서 html 파일 상에서 실행할 수 있게 해준다.
+npx babel --watch src --out-dir . --presets @babel/preset-react
+```
+### 1.2.3 웹팩의 기본 개념 이해하기
+* 웹팩(webpack)은 자바스크립트로 만든 프로그램을 배포하기 좋은 형태로 묶어주는 도구
+#### ESM 문법 익히기
+* ESM 폴더 아래의 파일들 참조
+### 1.2.4 웹팩 사용해보기
+* webpack-test 라는 폴더를 생성
+* `npm init -y `
+* `npm install webpack webpack-cli react react-dom`
+##### 클래스형 컴포넌트와 함수형 컴포넌트
+* 클래스형 컴포넌트는 함수형 컴포넌트가 할 수 있는 모든 일을 할 수 있따.
+* 함수형 컴포넌트는 다음을 할 수 없다.
+    * 상탯값을 가질 수 없다.
+    * 리액트 컴포넌트의 생명 주기 함수를 작성할 수 없다.
+* 리액트 버전 16.8부터 훅(hook) 기능이 추가되면서 함수형 컴포넌트에서도 상탯갑소가 생명 주기 함수 코드를 작성할 수 있게 되었다.
+* 새로운 프로젝트를 만든다면 클래스형 컴포넌트를 지양하고 함수형 컴포넌트를 만드는게 좋다.
+##### `npx webpack`
+## 1.3 create-react-app으로 시작하기
+### 1.3.1 create-react-aoo 사용해 보기
+`npx create-react-app cra-test`
+* npm 버전이 낮아서 실행이 안된다면
+`npm install -g create-react-app`
+`create-react-app cra-test`
+* 해당 디렉토리로 이동해서 프로젝트 실행
+`cd cra-test`
+`npm start`

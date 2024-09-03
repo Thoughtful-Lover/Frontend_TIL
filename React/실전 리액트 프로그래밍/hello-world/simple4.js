@@ -17,3 +17,5 @@ function Container() {
     onClick: () => setCount(count - 1)
   }, "\uAC10\uC18C")));
 }
+const domContainer = document.querySelector('#react-root');
+ReactDOM.render(React.createElement(Container), domContainer);
